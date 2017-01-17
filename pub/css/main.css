@@ -1,0 +1,15 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.clearTop {
+    padding-top: 25px;
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover {
+    margin: 15px;
+    color: yellow;
+    background-color: black;
+}
