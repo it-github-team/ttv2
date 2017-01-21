@@ -17,9 +17,9 @@
   </head>
   <body>
     <!-- Head Container Start -->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
       <!-- Navbar Start -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="text-center">
           <ul class="nav nav-pills nav-justified">
             <li<% if(viewVar=="index") {%> class="active"<% } %>><a href="/home">Home</a></li>
@@ -28,17 +28,39 @@
             <li<% if(viewVar=="about") {%> class="active"<% } %>><a href="/home/about">About</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <!-- Navbar End -->
-    </div>
+    <!-- </div> -->
+    <!-- New navbar start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li<% if(viewVar=="index") {%> class="active"<% } %>><a class="brandimg" href="/home"><img alt="tabletop logo" height=50 width=80 src="/img/tabletop.jpg"></img><% if(viewVar=="index") {%> <span class="sr-only">(current)</span> <%} %></a></li>
+          <li<% if(viewVar=="products") {%> class="active"<% } %>><a href="/home/products">Products<% if(viewVar=="products") {%> <span class="sr-only">(current)</span> <%} %></a></li>
+          <li<% if(viewVar=="contact") {%> class="active"<% } %>><a href="/home/contact">Contact Us<% if(viewVar=="contact") {%> <span class="sr-only">(current)</span> <%} %></a></li>
+          <li<% if(viewVar=="about") {%> class="active"<% } %>><a href="/home/about">About Us<% if(viewVar=="about") {%> <span class="sr-only">(current)</span> <%} %></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- New navbar end -->
     <!-- Head Container End -->
     <div class="container-fluid">
       <div class="row">
         <span class="clearTop">&nbsp;</span>
       </div>
     </div>
-    <% var path = "../" + base + "/" + viewVar %>
-    <%- include(path) %>
+    <div class="container-fluid">
+      <% var path = "../" + base + "/" + viewVar %>
+      <%- include(path) %>
+    </div>
     <div class="container-fluid">
       <hr />
       <div class="row">
